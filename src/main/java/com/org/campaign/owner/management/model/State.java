@@ -1,5 +1,8 @@
 package com.org.campaign.owner.management.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class State {
 
 	private String Active;

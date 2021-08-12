@@ -3,7 +3,7 @@ package com.org.campaign.owner.management.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Campaign_Owner_Mnagement")
+@Document(collection = "Campaign_Owner_Management")
 public class CampaignModel {
 
 	@Id
@@ -27,9 +27,10 @@ public class CampaignModel {
 	 * @param campaignChannels
 	 * @param campaignState
 	 */
-	public CampaignModel(String campaignOwnerName, String campaignContact, Channels campaignChannels,
+	public CampaignModel(int campaignOwnerId, String campaignOwnerName, String campaignContact, Channels campaignChannels,
 			State campaignState) {
 		super();
+		this.campaignOwnerId = campaignOwnerId;
 		this.campaignOwnerName = campaignOwnerName;
 		this.campaignContact = campaignContact;
 		this.campaignChannels = campaignChannels;
